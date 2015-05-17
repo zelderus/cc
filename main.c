@@ -4,12 +4,12 @@ int main (void)
 {
 	print_hello();
 	
-	p("File working\n");
+	p("File working");
 	char* str = "kiii\n";
 	write_demo(str);
 	
 
 
-	p("..End\n");
+	p("..End");
 	return 0;
 }

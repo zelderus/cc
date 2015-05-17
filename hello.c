@@ -9,7 +9,7 @@ int print_hello (void)
 }
 void p (char* str)
 {
-	printf("%s", str);
+	printf("%s\n", str);
 }
 
 void write_demo(char* str)

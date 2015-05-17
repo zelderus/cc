@@ -21,7 +21,7 @@ void write_demo(const char* str)
 	int fd;
 	// file opts
 	char* fname = "./kii.txt";
-	int fflags = O_CREAT | O_APPEND;
+	int fflags = O_CREAT | O_APPEND | O_RDWR;
 	mode_t fmode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	// open
 	errno = 0;
@@ -39,7 +39,7 @@ void write_demo(const char* str)
 	nr = write(fd, str, strlen(str));
 	if (nr == -1)
 	{
-		printf("E: file write err -> %s\n", strerror(errno));
+		printf("E: file '%d' write err -> %s\n", fd, strerror(errno));
 	}
 
 	// close

@@ -1,3 +1,0 @@
-
-void print_hello(void);
-void write_demo(char* str);
